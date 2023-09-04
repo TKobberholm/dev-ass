@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0.5em auto;
+    padding: 0;
+    background-color: darkslategrey;
+    color: whitesmoke;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    width: 70%;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 2em 0;
+}
+
+#number {
+    font-size: 6rem;
+}
+
+table {
+    width: 50%;
+    padding: 5px;
+}
+
+
