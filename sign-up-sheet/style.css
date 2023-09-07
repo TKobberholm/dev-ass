@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #faf0e6;
+}
+
+section {
+    margin: 50px 150px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: white;
+}
+
+#add-user {
+    background-color: forestgreen;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+#delete-a, #delete-u {
+    background-color: crimson;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+table {
+    margin: 0;
+    width: 50%;
+    text-align: center;
+    border: 2px solid white;
+    background-color: #faf0e6;
+}
+
+tr {
+    border: 1px dashed white;
+}
+
+tr:nth-child(even) {
+    background-color: #faebd7;
+}
+
+td {
+    padding: 10px;
+}
