@@ -1,26 +1,34 @@
 <?php 
     session_start();
 
+    //initialize counter if it doesnt exist
+    if (!isset($_SESSION['counter'])) {
+        $_SESSION['counter'] = 0;
+    }
+
     //check if formular is send
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //check if data is send
         if (isset($_POST['firstname'], $_POST['lastname'])) {
+            //get counter value and increment
+            $index = $_SESSION['counter'];
+            $_SESSION['counter']++;
+
             //save data to session array
-            $_SESSION['users'][] = ['firstname' => $_POST['firstname'], 'lastname' => $_POST['lastname']];
+            $_SESSION['users'][$index] = ['firstname' => $_POST['firstname'], 'lastname' => $_POST['lastname']];
         }
 
         //check if delete all button is clicked
         if (isset($_POST['delete-all-users'])) {
             unset ($_SESSION['users']);
+            //reset counter
+            $_SESSION['counter'] = 0;
         }
 
         //check if delete user button is clicked
         if (isset($_POST['delete-user'])) {
             $index = $_POST['delete-user'];
             unset($_SESSION['users'][$index]);
-        /* reset array vs index
-            $_SESSION['users'] = array_values($_SESSION['users']);
-        */
         }
     }
 ?>
@@ -35,7 +43,7 @@
 </head>
 <body>
     <section>
-        <div id="signup-container">
+        <div>
             <h1>Sign up here</h1>
             <form method="post">
                 <label for="firstname">Firstname:</label>

@@ -51,10 +51,6 @@ tr {
     border: 1px dashed white;
 }
 
-tr:nth-child(even) {
-    background-color: #faebd7;
-}
-
 td {
     padding: 10px;
 }
